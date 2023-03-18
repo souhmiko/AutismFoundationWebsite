@@ -1,0 +1,61 @@
+﻿body {
+    margin: 0;
+}
+
+form {
+    border: none;
+}
+
+.background {
+    background-color: #074f57;
+    background-image: url("autismday.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 10em;
+}
+
+.container{
+    max-width:960px;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align:center;
+}
+
+button {
+    background-color: #ffd800;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width:30 px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}
