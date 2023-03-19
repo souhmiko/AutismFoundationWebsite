@@ -24,8 +24,14 @@ form {
     padding-right: 1rem;
 }
 
+.box{
+    margin-top:80px;
+    margin-bottom:80px;
+}
+
 input[type=text], input[type=password] {
-    width: 100%;
+    
+    width:50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -37,11 +43,12 @@ input[type=text], input[type=password] {
 button {
     background-color: #ffd800;
     color: white;
+    text-transform: uppercase;
     padding: 16px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 20%;
 }
 
     button:hover {
