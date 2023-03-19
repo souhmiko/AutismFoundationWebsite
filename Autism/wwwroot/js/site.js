@@ -1,4 +1,18 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const toggle = document.getElementById('toggle');
+const body = document.querySelector('body');
+const icon = toggle.querySelector('icon');
 
-// Write your JavaScript code.
+toggle.addEventListener('click', function() {
+
+    this.classList.toggle('bi-moon');
+    if (this.classList.toggle('bi-brightness-high-fill')) {
+        body.style.background = '#f2f2f2';
+        body.style.color = '#333';
+        body.style.transition = '2s';
+    } else {
+        body.style.background = '#333';
+        body.style.color = '#f2f2f2';
+        toggle.style.color = '#333';
+        body.style.transition = '2s';
+    }
+});
