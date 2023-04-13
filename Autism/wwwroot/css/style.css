@@ -80,14 +80,14 @@ nav ul li a:hover{
     color: #162938;
 }
 
-.text-box{
-    width:90%;
-    color: #fff;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+button {
+    background-color: #ffd800;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
 
 .text-box h1{
