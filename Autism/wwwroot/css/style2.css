@@ -1,7 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     font-family: sans-serif;
     box-sizing: border-box;
@@ -9,91 +9,83 @@
 
 body {
     background-image: none;
-    background-color: #BDC3C7;
-}
-
-.paper{
-    min-height:100%;
+    background-color: #F4ECF7;
 }
 
 .about {
     width: 100%;
-    padding: 78px 0px;
-    background-color: #191919;
+    padding: 80px 0px;
+    background-color: #333;
 }
 
-.about img{
+.about img {
     height: auto;
     width: 420px;
 }
 
-.about-text{
-    width:550px;
+.about-text {
+    width: 550px;
 }
 
-.main{
-    width:1130px;
+
+.main {
+    width: 1130px;
     max-width: 95%;
-    margin:0 auto;
+    margin: 0 auto;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-around;
 }
 
-.about-text h1{
-    color:#fff;
+.about-text h1 {
+    color: #fff;
     font-size: 80px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
 
-.about-text h5{
+.about-text h5 {
     color: #fff;
     font-size: 25px;
     text-transform: capitalize;
-    margin-bottom: 25px;
+    letter-spacing: 2px;
 }
 
-.about-text p{
-    color:#fff;
+.about-text p {
+    color: #fff;
     letter-spacing: 1px;
     line-height: 28px;
-    font-size:18px;
+    font-size: 18px;
     margin-bottom: 45px;
 }
 
-button{
+
+button {
     background: #f9004d;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
-    transition:.4s;
+    transition: .4s;
 }
 
-button:hover{
-    background:transparent;
+button:hover {
+    background: transparent;
     border: 2px solid #f9004d;
     cursor: pointer;
 }
 
 
-/*---->Mission and vison---->*/
 
+/*----mission----*/
 .about-item {
     margin-bottom: 20px;
     margin-top: 20px;
     background-color: white;
     padding: 80px 30px;
     box-shadow: 0 0 9px rgba(0,0,0.6);
-}
-
-.row {
-    margin-top: 5%;
-    display: flow;
-    justify-content: space-around;
 }
 
 .about-item h3 {
@@ -108,6 +100,7 @@ button:hover{
     margin: 0 auto;
     border: none;
 }
+
 
 .about-item p {
     margin-top: 20px;
@@ -130,6 +123,3 @@ button:hover{
 .about-item:hover hr {
     transition: all 400ms ease-in-out;
 }
-
-/*----footer-----*/
-

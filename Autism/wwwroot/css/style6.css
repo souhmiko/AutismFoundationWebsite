@@ -1,26 +1,28 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
+//style6.css
+
 body {
-    font-family:"Quiksand", sans-serif;
-    background:#fff;
+    font-family: "Quiksand", sans-serif;
+    background: #fff;
     color: #1c1c1c;
 }
 
-section{
-    min-height:100vh;
-    width:80%;
-    margin:0 auto;
-    display:flex;
+section {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
 }
 
-.title{
+.title {
     font-size: 3rem;
     margin: 2rem 0rem;
 }
 
-.faq{
+.faq {
     max-width: 700px;
     margin-top: 2rem;
     padding-bottom: 1rem;
@@ -28,27 +30,27 @@ section{
     cursor: pointer;
 }
 
-.question{
+.question {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
-.question h3{
+.question h3 {
     font-size: 1.4em;
 }
 
-.answer{
-    max-height:0;
+.answer {
+    max-height: 0;
     overflow: hidden;
 }
 
-.answer p{
+.answer p {
     padding-top: 1rem;
     line-height: 1.6;
     font-size: 1.2rem;
 }
 
-.faq.active .answer{
+.faq.active .answer {
     max-height: 300px;
 }

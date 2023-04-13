@@ -2,24 +2,23 @@
 
 body {
     background-image: none;
-    background-color: #F9E4BE;
-}
-
-.team{
-    margin: 75px 0;
     background-color: #fff;
 }
 
-h1{
+.team {
+    margin: 75px 0;
+}
+
+h1 {
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
     letter-spacing: 2px;
     color: #333;
     padding-bottom: 10px;
 }
 
-h1:after{
-    content:'';
+h1:after {
+    content: '';
     background: #333;
     display: block;
     height: 3px;
@@ -27,11 +26,11 @@ h1:after{
     margin: 10px auto;
 }
 
-.profile{
+.profile {
     margin-top: 25px;
 }
 
-.profile .img-box{
+.profile .img-box {
     opacity: 1;
     display: block;
     position: relative;
@@ -42,10 +41,10 @@ h1:after{
     height: 50%;
 }
 
-.profile h2{
+.profile h2 {
     font-size: 22px;
     font-weight: bold;
-    margin-top:15px;
+    margin-top: 15px;
 }
 
 .profile h3 {
@@ -54,21 +53,21 @@ h1:after{
     margin-top: 15px;
 }
 
-.img-box:after{
-    content:'';
+.img-box:after {
+    content: '';
     opacity: 0;
     background-color: rgba(0,0,0,0.6);
     position: absolute;
-    right:0;
-    left:0;
-    top:0;
-    bottom:0;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
 }
 
-.img-box ul{
-    margin:0;
+.img-box ul {
+    margin: 0;
     padding: 20px 0;
-    position:absolute;
+    position: absolute;
     z-index: 1;
     bottom: 0;
     display: block;
@@ -77,7 +76,7 @@ h1:after{
     opacity: 0;
 }
 
-.img-box ul li{
+.img-box ul li {
     width: 30px;
     height: 30px;
     border: 1px solid #fff;
@@ -87,19 +86,19 @@ h1:after{
     display: inline-block;
 }
 
-.img-box a{
+.img-box a {
     color: #fff;
 }
 
-.img-box:hover:after{
-    opacity:1;
-}
-
-.img-box:hover ul{
+.img-box:hover:after {
     opacity: 1;
 }
 
-.img-box a:hover li{
+.img-box:hover ul {
+    opacity: 1;
+}
+
+.img-box a:hover li {
     color: #007bff;
     border: 1px solid #007bff;
 }
