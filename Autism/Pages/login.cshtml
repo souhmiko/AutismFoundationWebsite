@@ -1,40 +1,46 @@
 ﻿@page
 @model Autism.Pages.loginModel
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Home";
 }
 @Model.Login
 
-<div class="text-center">
-        <br>
-            <br>
-                <br>
-                    <h1 class="display-4">Welcome</h1>
-                <br />
-            <br />
-        <br />
-            <div class="wrapper">
-                <form class="login-form">
-                        
-                    <h2>Login</h2>
 
-                    <div class="username">
-                        <input type="text" class="form-control" name="Username" placeholder="Username/Email Address" required="" autofocus="" />
-                    </div>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/loginpage.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
 
-                    <div class="password">
-                        <input type="password" class="form-control" name="Password" placeholder="Password" required=""/>
-                    </div>
-                </form>
-            </div>     
-                     
-                <label class="checkbox">
-                    <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-                </label>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="top-header">
+                <header>Login</header>
+            </div>
 
-                <div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>  
+            <div class="input-field">
+                <input type="text" class="input" placeholder="Username" required>
+                <i class="bi bi-person"></i>
+            </div>
+            <div class="input-field">
+                <input type="password" class="input" placeholder="Password" required>
+                <i class="bi bi-lock"></i>
+            </div>
+            <div class="input-field">
+                <input type="submit" class="submit" value="Login">
+            </div>
+
+            <div class="bottom">
+                <div class="left">
+                    <input type="checkbox" id="check">
+                    <label for="check">Remember Me</label>
                 </div>
-
-                <span class="forgot">Forgot<a href="#">password?</a></span>
-</div>
+                <div class="right">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
