@@ -8,17 +8,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/style2.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body class="abb">
+
+    <header>
+        <div class="logo">MARF</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="Index" class="active">HOME</a></li>
+                <li><a href="aboutus">ABOUT US</a></li>
+                <li><a href="our">TEAM</a></li>
+                <li><a href="partner">PARTNERSHIP</a></li>
+                <li><a href="blog">BLOG</a></li>
+                <li><a href="fqa">FQA</a></li>
+                <li><a href="login">LOGIN</a></li>
+            </ul>
+        </nav>
+     </header>
+
+    <!----------About------------------>
     <section class="about">
-        <div class="main">
+        <div class="mainc">
             <img src="~/css/girl2.jpg">
             <div class="about-text">
                 <h1>About Us</h1>
-                <h5>What is Austism</h5>
+                <h5>What is Austism?</h5>
                 <p>Autism, or autism spectrum disorder (ASD), is a neurodevelopmental disorder that
                   affects communication, behavior, and social interaction. It is called a spectrum 
                   disorder because the symptoms and severity can vary widely among individuals. 
@@ -26,12 +48,13 @@
                   repetitive behaviors or interests, and sensory issues. Autism is typically diagnosed in early
                   childhood, and while there is no known cure, interventions such as therapy and educational support
                   can help individuals with autism to improve their communication, social skills, and daily functioning.</p>
-                  <button type="button" onclick="location.href='https://www.cdc.gov/ncbddd/autism/signs.html#:~:text=Autism%20spectrum%20disorder%20(ASD)%20is,%2C%20moving%2C%20or%20paying%20attention.'">Let's Talk</button>
-                  <button type="button" onclick="location.href='https://youtu.be/Lk4qs8jGN4U'">Wacth More</button>
+                  <button class="btn1" type="button" onclick="location.href='https://www.cdc.gov/ncbddd/autism/signs.html#:~:text=Autism%20spectrum%20disorder%20(ASD)%20is,%2C%20moving%2C%20or%20paying%20attention.'">Let's Talk</button>
+                  <button class="btn1" type="button" onclick="location.href='https://youtu.be/Lk4qs8jGN4U'">Wacth More</button>
             </div>
         </div>
     </section>
 
+    <!-------------mission and vision----------------------->
     <section class="mission">
        <div id="about-2">
            <div class="content-box-lg">
@@ -64,6 +87,104 @@
            </div>
        </div>
    </section>
+
+
+   <!---service section------->
+    <section id="services">
+        <div class="services container">
+            <div class="service-top">
+                <h1 class="section-title">Serv<span>i</span>ces</h1>
+                <p>Our services are designed to meet the unique needs of individuals with
+                   autism and their families. We offer affordable educational and training
+                   resources to caregivers, teachers, therapists, and service providers,
+                   as well as an online resource library and funding for autism-specific
+                   training for therapists in Malaysia.</p>
+            </div>
+            <div class="service-bottom">
+                <div class="service-item">
+                    <div class="icon"><i class="bi bi-bookmark-heart-fill"></i></div>
+                    <h2>Malaysia Care</h2>
+                    <p>Malaysia Care provides support and resources to assist individuals
+                       with autism and their families in Malaysia.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="bi bi-bookmark-heart-fill"></i></div>
+                    <h2>OKU Registration</h2>
+                    <p>Malaysia Care provides support and resources to assist individuals
+                       with autism and their families in Malaysia.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="bi bi-bookmark-heart-fill"></i></div>
+                    <h2>Psychologists</h2>
+                    <p>Malaysia Care provides support and resources to assist individuals
+                       with autism and their families in Malaysia.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="bi bi-bookmark-heart-fill"></i></div>
+                    <h2>ATEC scoring</h2>
+                    <p>Malaysia Care provides support and resources to assist individuals
+                       with autism and their families in Malaysia.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="bi bi-bookmark-heart-fill"></i></div>
+                    <h2>How to register for PPKI</h2>
+                    <p>Malaysia Care provides support and resources to assist individuals
+                       with autism and their families in Malaysia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--------Project section-------->
+    <section id="projects">
+        <div class="projects container">
+            <div class="projects-header">
+                <h1 class="section-title">Recent <span>Projects</span></h1>
+            </div>
+            <div class="all-projects">
+                <div class="project-item">
+                    <div class="project-info">
+                        <h1>Projects 1</h1>
+                        <h2>Coding is Love</h2>
+                        <p>Educational and training programs for individuals with autism and their families/caregivers.</p>
+                    </div>
+                    <div class="project-img">
+                        <img src="#" alt="img">
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h1>Projects 2</h1>
+                        <h2>Coding is Love</h2>
+                        <p>Educational and training programs for individuals with autism and their families/caregivers.</p>
+                    </div>
+                    <div class="project-img">
+                        <img src="#" alt="img">
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h1>Projects 3</h1>
+                        <h2>Coding is Love</h2>
+                        <p>Educational and training programs for individuals with autism and their families/caregivers.</p>
+                    </div>
+                    <div class="project-img">
+                        <img src="#" alt="img">
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h1>Projects 4</h1>
+                        <h2>Coding is Love</h2>
+                        <p>Educational and training programs for individuals with autism and their families/caregivers.</p>
+                    </div>
+                    <div class="project-img">
+                        <img src="#" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
