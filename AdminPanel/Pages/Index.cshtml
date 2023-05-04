@@ -1,0 +1,175 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+
+<body class="admin">
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <h2>MARF</h2>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="link-name">Tables</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="link-name">Manage Team</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span class="link-name">Profile Form</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="link-name">Messages</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span class="link-name">Calendar</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-flag"></i>
+                    <span class="link-name">Report</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span class="link-name">Settings</span>
+                </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-solid fa-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="~/css/profile.jpg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="text">Visitors</span>
+                        <span class="number">50,120</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="fa-solid fa-users-line"></i>
+                        <span class="text">Volunteers</span>
+                        <span class="number">50,120</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        <span class="text">Donation</span>
+                        <span class="number">50,120</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="title">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="text">Recent Activity</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Name</span>
+                        <span class="data-list">Prem Sahi</span>
+                        <span class="data-list">Prem Sahi</span>
+                        <span class="data-list">Prem Sahi</span>
+                        <span class="data-list">Prem Sahi</span>
+                        <span class="data-list">Prem Sahi</span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Type</span>
+                        <span class="data-list">Admin</span>
+                        <span class="data-list">Admin</span>
+                        <span class="data-list">Admin</span>
+                        <span class="data-list">Admin</span>
+                        <span class="data-list">Admin</span>
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Email</span>
+                        <span class="data-list">abcd123@gmail.com</span>
+                        <span class="data-list">abcd123@gmail.com</span>
+                        <span class="data-list">abcd123@gmail.com</span>
+                        <span class="data-list">abcd123@gmail.com</span>
+                        <span class="data-list">abcd123@gmail.com</span>
+                    </div>
+                    <div class="data time">
+                        <span class="data-title">Date</span>
+                        <span class="data-list">21:55</span>
+                        <span class="data-list">21:55</span>
+                        <span class="data-list">21:55</span>
+                        <span class="data-list">21:55</span>
+                        <span class="data-list">21:55</span>
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Status</span>
+                        <span class="data-list">Update</span>
+                        <span class="data-list">Update</span>
+                        <span class="data-list">Update</span>
+                        <span class="data-list">Update</span>
+                        <span class="data-list">Update</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
