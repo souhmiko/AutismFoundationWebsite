@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autism", "Autism\Autism.csp
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseAutism", "DatabaseAutism\DatabaseAutism.sqlproj", "{088D79A0-E247-4BDE-9014-1EFAFC05A817}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPanel", "AdminPanel\AdminPanel.csproj", "{C8E8558F-7C08-4206-8B9A-737B538B96B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminPanel", "AdminPanel\AdminPanel.csproj", "{C8E8558F-7C08-4206-8B9A-737B538B96B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

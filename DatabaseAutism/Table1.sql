@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Table1]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [zcxzcx] FLOAT NULL
+    [ink] FLOAT NULL
 )
