@@ -1,0 +1,82 @@
+﻿@page
+@model AdminPanel.Pages.profileModel
+@{
+}
+
+<nav>
+    <div class="logo-name">
+        <div class="logo-image">
+            <h2>MARF</h2>
+        </div>
+    </div>
+
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li><a href="/Index">
+                <i class="fa-solid fa-house"></i>
+                <span class="link-name">Dashboard</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-folder"></i>
+                <span class="link-name">Tables</span>
+            </a></li>
+            <li><a href="/manage">
+                <i class="fa-solid fa-user-group"></i>
+                <span class="link-name">Manage Team</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-chart-line"></i>
+                <span class="link-name">Profile Form</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="link-name">Messages</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-calendar"></i>
+                <span class="link-name">Calendar</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-flag"></i>
+                <span class="link-name">Report</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span class="link-name">Settings</span>
+            </a></li>
+        </ul>
+
+        <ul class="logout-mode">
+            <li><a href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="link-name">Logout</span>
+            </a></li>
+
+            <li class="mode">
+                <a href="#">
+                    <i class="fa-solid fa-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="~/css/profile.jpg" alt="">
+        </div>
+
+
+    </section>
