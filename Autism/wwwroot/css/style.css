@@ -1669,3 +1669,89 @@ textarea.input{
         padding: 0.45rem 1.2rem;
     }
 }
+
+/*---------------------------------------------------------------------donate-----------*/
+
+.container4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ccccff 0%, #ffffcc 100%);
+    padding-bottom: 70px;
+}
+
+.container4 form{
+    padding: 20px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.container4 form .row4{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container4 form .row4 .col{
+    flex: 1 1 250px;
+}
+
+.container4 form .row4 .col .title3{
+    font-size: 20px;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.container4 form .row4 .col .inputBox{
+    margin: 15px 0;
+}
+
+.container4 form .row4 .col .inputBox span{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.container4 form .row4 .col .inputBox input{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container4 form .row4 .col .inputBox input:focus{
+    border: 1px solid #000;
+}
+
+.container4 form .row4 .col .flex{
+    display:flex;
+    gap: 15px;
+}
+
+.container4 form .row4 .col .flex .inputBox{
+    margin-top: 5px;
+}
+
+.container4 form .row4 .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container4 form .submit-btn{
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #27ae60;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.container4 form .submit-btn:hover{
+    background: #2ecc71;
+}
