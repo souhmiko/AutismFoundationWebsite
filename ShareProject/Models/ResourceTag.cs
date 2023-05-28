@@ -5,9 +5,11 @@ using System.Collections.Generic;
 
 namespace ShareProject.Models
 {
-    public partial class Table1
+    public partial class ResourceTag
     {
-        public int Id { get; set; }
-        public double? Ink { get; set; }
+        public long Id { get; set; }
+        public string TagName { get; set; }
+
+        public virtual ResourceCategory IdNavigation { get; set; }
     }
 }
