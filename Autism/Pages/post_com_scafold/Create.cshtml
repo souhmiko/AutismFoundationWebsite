@@ -1,0 +1,62 @@
+﻿@page
+@model Autism.Pages.post_com_scafold.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PostComment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PostComment.PostId" class="control-label"></label>
+                <select asp-for="PostComment.PostId" class ="form-control" asp-items="ViewBag.PostId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostComment.ParentId" class="control-label"></label>
+                <select asp-for="PostComment.ParentId" class ="form-control" asp-items="ViewBag.ParentId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostComment.Title" class="control-label"></label>
+                <input asp-for="PostComment.Title" class="form-control" />
+                <span asp-validation-for="PostComment.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostComment.Published" class="control-label"></label>
+                <input asp-for="PostComment.Published" class="form-control" />
+                <span asp-validation-for="PostComment.Published" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostComment.CreatedAtdate" class="control-label"></label>
+                <input asp-for="PostComment.CreatedAtdate" class="form-control" />
+                <span asp-validation-for="PostComment.CreatedAtdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostComment.PublishedAtdate" class="control-label"></label>
+                <input asp-for="PostComment.PublishedAtdate" class="form-control" />
+                <span asp-validation-for="PostComment.PublishedAtdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostComment.Content" class="control-label"></label>
+                <input asp-for="PostComment.Content" class="form-control" />
+                <span asp-validation-for="PostComment.Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

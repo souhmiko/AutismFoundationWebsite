@@ -1,0 +1,49 @@
+﻿@page
+@model Autism.Pages.employee.lear_scafold.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>EmployLearning</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmployLearning.Name" class="control-label"></label>
+                <input asp-for="EmployLearning.Name" class="form-control" />
+                <span asp-validation-for="EmployLearning.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployLearning.Location" class="control-label"></label>
+                <input asp-for="EmployLearning.Location" class="form-control" />
+                <span asp-validation-for="EmployLearning.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployLearning.StarDate" class="control-label"></label>
+                <input asp-for="EmployLearning.StarDate" class="form-control" />
+                <span asp-validation-for="EmployLearning.StarDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployLearning.EndDate" class="control-label"></label>
+                <input asp-for="EmployLearning.EndDate" class="form-control" />
+                <span asp-validation-for="EmployLearning.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

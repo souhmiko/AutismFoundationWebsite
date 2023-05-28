@@ -1,0 +1,61 @@
+﻿@page
+@model Autism.Pages.post_com_scafold.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PostComment</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostComment.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostComment.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostComment.Published)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostComment.Published)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostComment.CreatedAtdate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostComment.CreatedAtdate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostComment.PublishedAtdate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostComment.PublishedAtdate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostComment.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostComment.Content)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostComment.Parent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostComment.Parent.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostComment.Post)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostComment.Post.Title)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.PostComment?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

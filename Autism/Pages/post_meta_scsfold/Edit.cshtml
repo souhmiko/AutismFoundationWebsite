@@ -1,0 +1,45 @@
+﻿@page
+@model Autism.Pages.post_meta_scsfold.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BlogPostMeta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BlogPostMeta.Id" />
+            <div class="form-group">
+                <label asp-for="BlogPostMeta.PostId" class="control-label"></label>
+                <select asp-for="BlogPostMeta.PostId" class="form-control" asp-items="ViewBag.PostId"></select>
+                <span asp-validation-for="BlogPostMeta.PostId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPostMeta.Key" class="control-label"></label>
+                <input asp-for="BlogPostMeta.Key" class="form-control" />
+                <span asp-validation-for="BlogPostMeta.Key" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPostMeta.Content" class="control-label"></label>
+                <input asp-for="BlogPostMeta.Content" class="form-control" />
+                <span asp-validation-for="BlogPostMeta.Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
