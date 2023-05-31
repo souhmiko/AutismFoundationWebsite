@@ -1,0 +1,122 @@
+﻿@page
+@model AdminPanel.Pages.listModel
+@{
+}
+
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <h2>MARF</h2>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="/Index">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="/manage">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="link-name">Manage Team</span>
+                </a></li>
+                <li><a href="/list">
+                    <i class="fa-solid fa-tag"></i>
+                    <span class="link-name">Blogs</span>
+                </a></li>
+                <li><a href="/profile">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span class="link-name">Profile Form</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="link-name">Messages</span>
+                </a></li>
+                <li><a href="/calendar">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span class="link-name">Calendar</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-flag"></i>
+                    <span class="link-name">Report</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span class="link-name">Settings</span>
+                </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-solid fa-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="~/css/profile.jpg" alt="">
+        </div>
+
+        <div class="blog-manage">
+            <div class="button-group">
+                <a asp-page="/create" class="btn btn-big">Add Post</a>
+                <a asp-page="#" class="btn btn-big">Manage Post</a>
+            </div>
+
+            <div class="blogcontent">
+
+                <h2 class="page-title">Manage Posts</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>SN</td>
+                            <td>Title</td>
+                            <td>Author</td>
+                            <td colspan="3">Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>This is the first post</td>
+                            <td>Awa</td>
+                            <td><button type="button">Edit</button></td>
+                            <td><button type="button">Delete</button></td>
+                            <td><button type="button">Publish</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>This is the second post</td>
+                            <td>Melvin</td>
+                            <td><button type="button">Edit</button></td>
+                            <td><button type="button">Delete</button></td>
+                            <td><button type="button">Publish</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+</section>
