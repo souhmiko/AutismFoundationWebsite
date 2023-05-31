@@ -1,7 +1,17 @@
+global using ShareProject.Models;
+<<<<<<< HEAD
+using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
+
+=======
+>>>>>>> fe85132dc6022029863074b9ffe86a1eccb02e62
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton(builder.Configuration);
+builder.Services.AddDbContext<DatabaseAutismContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnectionString")));
 
 var app = builder.Build();
 

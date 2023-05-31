@@ -56,11 +56,32 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-  </ItemGroup>
-  <ItemGroup>
-    <Build Include="Table1.sql" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DatabaseAutism.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Tag.sql" />
+    <Build Include="dbo\Tables\ResourceTag.sql" />
+    <Build Include="dbo\Tables\ResourceCategory.sql" />
+    <Build Include="dbo\Tables\ResourceAttachment.sql" />
+    <Build Include="dbo\Tables\ResourceAgeRange.sql" />
+    <Build Include="dbo\Tables\Resource.sql" />
+    <Build Include="dbo\Tables\Publication.sql" />
+    <Build Include="dbo\Tables\post_comment.sql" />
+    <Build Include="dbo\Tables\post_category.sql" />
+    <Build Include="dbo\Tables\Language.sql" />
+    <Build Include="dbo\Tables\Employment.sql" />
+    <Build Include="dbo\Tables\Employer.sql" />
+    <Build Include="dbo\Tables\Employ.Training.sql" />
+    <Build Include="dbo\Tables\Employ.Learning.sql" />
+    <Build Include="dbo\Tables\Employ.ASD.sql" />
+    <Build Include="dbo\Tables\category.sql" />
+    <Build Include="dbo\Tables\BlogUser.sql" />
+    <Build Include="dbo\Tables\BlogPost_meta.sql" />
+    <Build Include="dbo\Tables\BlogPost.sql" />
+    <Build Include="dbo\Tables\Age.Range.sql" />
   </ItemGroup>
 </Project>

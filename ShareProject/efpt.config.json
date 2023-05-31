@@ -1,0 +1,117 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "DatabaseAutismContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "ShareProject",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Age.Range]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BlogPost]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BlogPost_meta]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BlogUser]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employ.ASD]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employ.Learning]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employ.Training]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Language]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[post_category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[post_comment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Publication]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Resource]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ResourceAgeRange]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ResourceAttachment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ResourceCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ResourceTag]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tag]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "..\\DatabaseAutism\\DatabaseAutism.sqlproj",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

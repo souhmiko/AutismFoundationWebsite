@@ -1,0 +1,70 @@
+﻿@page
+@model Autism.Pages.NewFolder.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BlogPost</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BlogPost.Id" />
+            <div class="form-group">
+                <label asp-for="BlogPost.AuthorId" class="control-label"></label>
+                <select asp-for="BlogPost.AuthorId" class="form-control" asp-items="ViewBag.AuthorId"></select>
+                <span asp-validation-for="BlogPost.AuthorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPost.ParentId" class="control-label"></label>
+                <select asp-for="BlogPost.ParentId" class="form-control" asp-items="ViewBag.ParentId"></select>
+                <span asp-validation-for="BlogPost.ParentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPost.Title" class="control-label"></label>
+                <input asp-for="BlogPost.Title" class="form-control" />
+                <span asp-validation-for="BlogPost.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPost.Publised" class="control-label"></label>
+                <input asp-for="BlogPost.Publised" class="form-control" />
+                <span asp-validation-for="BlogPost.Publised" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPost.CreatedAtdate" class="control-label"></label>
+                <input asp-for="BlogPost.CreatedAtdate" class="form-control" />
+                <span asp-validation-for="BlogPost.CreatedAtdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPost.UpdatedAtdate" class="control-label"></label>
+                <input asp-for="BlogPost.UpdatedAtdate" class="form-control" />
+                <span asp-validation-for="BlogPost.UpdatedAtdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPost.PublisedAtdate" class="control-label"></label>
+                <input asp-for="BlogPost.PublisedAtdate" class="form-control" />
+                <span asp-validation-for="BlogPost.PublisedAtdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogPost.Content" class="control-label"></label>
+                <input asp-for="BlogPost.Content" class="form-control" />
+                <span asp-validation-for="BlogPost.Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

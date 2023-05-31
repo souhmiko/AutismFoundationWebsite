@@ -1,0 +1,31 @@
+﻿@page
+@model Autism.Pages.employ.train_scafold.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>EmployTraining</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployTraining.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmployTraining.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployTraining.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmployTraining.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.EmployTraining?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

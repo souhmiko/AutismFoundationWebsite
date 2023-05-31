@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using ShareProject.Models;
+
+namespace Autism.Pages.post_com_scafold
+{
+    public class CreateModel : PageModel
+    {
+        private readonly ShareProject.Models.DatabaseAutismContext _context;
+
+        public CreateModel(ShareProject.Models.DatabaseAutismContext context)
+        {
+            _context = context;
+        }
+
+        public IActionResult OnGet()
+        {
+        ViewData["ParentId"] = new SelectList(_context.PostComment, "Id", "Id");
+        ViewData["PostId"] = new SelectList(_context.BlogPost, "Id", "Title");
+            return Page();
+        }
+
+        [BindProperty]
+        public PostComment PostComment { get; set; } = default!;
+        
+
+        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        public async Task<IActionResult> OnPostAsync()
+        {
+          if (!ModelState.IsValid || _context.PostComment == null || PostComment == null)
+            {
+                return Page();
+            }
+
+            _context.PostComment.Add(PostComment);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage("./Index");
+        }
+    }
+}
