@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AdminPanel.Pages
 {
-    public class calendarModel : PageModel
+    public class taskModel : PageModel
     {
         public void OnGet()
         {

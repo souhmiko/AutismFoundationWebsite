@@ -9,7 +9,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseAutism", "DatabaseA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminPanel", "AdminPanel\AdminPanel.csproj", "{C8E8558F-7C08-4206-8B9A-737B538B96B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareProject", "ShareProject\ShareProject.csproj", "{C3703585-7ED7-4FC7-AA53-CE6DC998EBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareProject", "ShareProject\ShareProject.csproj", "{C3703585-7ED7-4FC7-AA53-CE6DC998EBC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
