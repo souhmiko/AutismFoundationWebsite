@@ -1,10 +1,9 @@
 global using ShareProject.Models;
-<<<<<<< HEAD
+
 using Microsoft.EntityFrameworkCore;
 using System.Xml.Linq;
 
-=======
->>>>>>> fe85132dc6022029863074b9ffe86a1eccb02e62
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
