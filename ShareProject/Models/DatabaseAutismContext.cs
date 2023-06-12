@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ShareProject.Models
 {
-    public partial class DatabaseAutismContext : DbContext
+    public partial class DatabaseAutismContext
     {
         public DatabaseAutismContext()
         {
@@ -19,6 +19,12 @@ namespace ShareProject.Models
         }
 
         public virtual DbSet<AgeRange> AgeRange { get; set; }
+        public virtual DbSet<AspNetRoleClaims> AspNetRoleClaims { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<BlogPost> BlogPost { get; set; }
         public virtual DbSet<BlogPostMeta> BlogPostMeta { get; set; }
         public virtual DbSet<BlogUser> BlogUser { get; set; }
@@ -37,6 +43,7 @@ namespace ShareProject.Models
         public virtual DbSet<ResourceCategory> ResourceCategory { get; set; }
         public virtual DbSet<ResourceTag> ResourceTag { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
+        public virtual DbSet<Tagpost> Tagpost { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -53,6 +60,81 @@ namespace ShareProject.Models
                     .HasForeignKey(d => d.AgeRange1)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Age.Range_ToResourceAgeRange");
+            });
+
+            modelBuilder.Entity<AspNetRoleClaims>(entity =>
+            {
+                entity.Property(e => e.RoleId)
+                    .IsRequired()
+                    .HasMaxLength(450);
+
+                entity.HasOne(d => d.Role)
+                    .WithMany(p => p.AspNetRoleClaims)
+                    .HasForeignKey(d => d.RoleId);
+            });
+
+            modelBuilder.Entity<AspNetRoles>(entity =>
+            {
+                entity.Property(e => e.Name).HasMaxLength(256);
+
+                entity.Property(e => e.NormalizedName).HasMaxLength(256);
+            });
+
+            modelBuilder.Entity<AspNetUserClaims>(entity =>
+            {
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .HasMaxLength(450);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.AspNetUserClaims)
+                    .HasForeignKey(d => d.UserId);
+            });
+
+            modelBuilder.Entity<AspNetUserLogins>(entity =>
+            {
+                entity.HasKey(e => new { e.LoginProvider, e.ProviderKey });
+
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .HasMaxLength(450);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.AspNetUserLogins)
+                    .HasForeignKey(d => d.UserId);
+            });
+
+            modelBuilder.Entity<AspNetUserTokens>(entity =>
+            {
+                entity.HasKey(e => new { e.UserId, e.LoginProvider, e.Name });
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.AspNetUserTokens)
+                    .HasForeignKey(d => d.UserId);
+            });
+
+            modelBuilder.Entity<AspNetUsers>(entity =>
+            {
+                entity.Property(e => e.Email).HasMaxLength(256);
+
+                entity.Property(e => e.NormalizedEmail).HasMaxLength(256);
+
+                entity.Property(e => e.NormalizedUserName).HasMaxLength(256);
+
+                entity.Property(e => e.UserName).HasMaxLength(256);
+
+                entity.HasMany(d => d.Role)
+                    .WithMany(p => p.User)
+                    .UsingEntity<Dictionary<string, object>>(
+                        "AspNetUserRoles",
+                        l => l.HasOne<AspNetRoles>().WithMany().HasForeignKey("RoleId"),
+                        r => r.HasOne<AspNetUsers>().WithMany().HasForeignKey("UserId"),
+                        j =>
+                        {
+                            j.HasKey("UserId", "RoleId");
+
+                            j.ToTable("AspNetUserRoles");
+                        });
             });
 
             modelBuilder.Entity<BlogPost>(entity =>
@@ -86,13 +168,11 @@ namespace ShareProject.Models
                 entity.HasOne(d => d.Author)
                     .WithMany(p => p.BlogPost)
                     .HasForeignKey(d => d.AuthorId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_BlogPost_ToBlogUser");
 
                 entity.HasOne(d => d.Parent)
                     .WithMany(p => p.InverseParent)
                     .HasForeignKey(d => d.ParentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_BlogPost_ToBlogPost");
             });
 
@@ -124,6 +204,11 @@ namespace ShareProject.Models
 
             modelBuilder.Entity<BlogUser>(entity =>
             {
+                entity.Property(e => e.AspnetuserId)
+                    .IsRequired()
+                    .HasMaxLength(450)
+                    .HasColumnName("aspnetuserID");
+
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasColumnType("ntext")
@@ -157,6 +242,12 @@ namespace ShareProject.Models
                     .HasColumnName("profile");
 
                 entity.Property(e => e.RegDate).HasColumnType("datetime");
+
+                entity.HasOne(d => d.Aspnetuser)
+                    .WithMany(p => p.BlogUser)
+                    .HasForeignKey(d => d.AspnetuserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_User_ToTable");
             });
 
             modelBuilder.Entity<Category>(entity =>
@@ -204,10 +295,17 @@ namespace ShareProject.Models
             {
                 entity.ToTable("Employ.ASD");
 
+                entity.Property(e => e.Asdid).HasColumnName("ASDID");
+
                 entity.Property(e => e.Name)
-                    .IsRequired()
                     .HasMaxLength(10)
                     .IsFixedLength();
+
+                entity.HasOne(d => d.Asd)
+                    .WithMany(p => p.EmployAsd)
+                    .HasForeignKey(d => d.Asdid)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Employ.ASD_ToEmployment");
             });
 
             modelBuilder.Entity<EmployLearning>(entity =>
@@ -261,9 +359,7 @@ namespace ShareProject.Models
 
             modelBuilder.Entity<Employment>(entity =>
             {
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasColumnType("ntext");
+                entity.Property(e => e.Name).HasColumnType("ntext");
 
                 entity.HasOne(d => d.EmployLearning)
                     .WithMany(p => p.Employment)
@@ -277,11 +373,23 @@ namespace ShareProject.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Employment_ToEmploy.Training");
 
+                entity.HasOne(d => d.EmployasdNavigation)
+                    .WithMany(p => p.Employment)
+                    .HasForeignKey(d => d.Employasd)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Employment_ToEmploy.ASD");
+
                 entity.HasOne(d => d.Employer)
                     .WithMany(p => p.Employment)
                     .HasForeignKey(d => d.EmployerId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Employment_ToEmployer");
+
+                entity.HasOne(d => d.EmployerNavigation)
+                    .WithMany(p => p.InverseEmployerNavigation)
+                    .HasForeignKey(d => d.EmployerId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Employment_ToEmployment");
             });
 
             modelBuilder.Entity<Language>(entity =>
@@ -334,25 +442,28 @@ namespace ShareProject.Models
 
             modelBuilder.Entity<Publication>(entity =>
             {
-                entity.Property(e => e.Books)
-                    .IsRequired()
+                entity.Property(e => e.AuthorName)
                     .HasMaxLength(10)
-                    .HasColumnName("books")
+                    .HasColumnName("authorName")
                     .IsFixedLength();
 
-                entity.Property(e => e.Ebooks)
+                entity.Property(e => e.BookCode)
                     .IsRequired()
                     .HasMaxLength(10)
-                    .HasColumnName("ebooks")
+                    .HasColumnName("bookCode")
                     .IsFixedLength();
 
-                entity.Property(e => e.PublicationId).HasColumnName("Publication_Id");
+                entity.Property(e => e.BookTitle).HasColumnName("bookTitle");
 
-                entity.HasOne(d => d.PublicationNavigation)
-                    .WithMany(p => p.Publication)
-                    .HasForeignKey(d => d.PublicationId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Publication_ToResource");
+                entity.Property(e => e.Content)
+                    .IsRequired()
+                    .HasColumnName("content");
+
+                entity.Property(e => e.EbookCode)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .HasColumnName("ebookCode")
+                    .IsFixedLength();
             });
 
             modelBuilder.Entity<Resource>(entity =>
@@ -362,10 +473,13 @@ namespace ShareProject.Models
                     .HasMaxLength(50)
                     .HasColumnName("Name ");
 
-                entity.Property(e => e.ResCategoryId)
-                    .IsRequired()
-                    .HasColumnType("ntext")
-                    .HasColumnName("Res_CategoryId");
+                entity.Property(e => e.ResCategoryId).HasColumnName("Res_CategoryId");
+
+                entity.HasOne(d => d.ResCategory)
+                    .WithMany(p => p.Resource)
+                    .HasForeignKey(d => d.ResCategoryId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Resource_ToResourceCategory");
             });
 
             modelBuilder.Entity<ResourceAgeRange>(entity =>
@@ -381,6 +495,12 @@ namespace ShareProject.Models
                 entity.Property(e => e.FileName).IsRequired();
 
                 entity.Property(e => e.FilePath).IsRequired();
+
+                entity.HasOne(d => d.Age)
+                    .WithMany(p => p.ResourceAttachment)
+                    .HasForeignKey(d => d.AgeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_ResourceAttachment_ToResourceAgeRange");
 
                 entity.HasOne(d => d.Language)
                     .WithMany(p => p.ResourceAttachment)
@@ -405,25 +525,51 @@ namespace ShareProject.Models
 
             modelBuilder.Entity<ResourceTag>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedOnAdd();
-
                 entity.Property(e => e.TagName)
                     .IsRequired()
-                    .HasColumnType("text");
+                    .HasColumnType("text")
+                    .HasColumnName("Tag_Name");
 
-                entity.HasOne(d => d.IdNavigation)
-                    .WithOne(p => p.ResourceTag)
-                    .HasForeignKey<ResourceTag>(d => d.Id)
+                entity.HasOne(d => d.Tag)
+                    .WithMany(p => p.ResourceTag)
+                    .HasForeignKey(d => d.TagId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_ResourceTag_ToResourceCategory");
             });
 
             modelBuilder.Entity<Tag>(entity =>
             {
-                entity.Property(e => e.Name)
+                entity.Property(e => e.Content)
                     .IsRequired()
+                    .HasColumnType("ntext")
+                    .HasColumnName("content");
+
+                entity.Property(e => e.Name)
                     .HasMaxLength(50)
                     .HasColumnName("name");
+
+                entity.Property(e => e.Title).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<Tagpost>(entity =>
+            {
+                entity.ToTable("tagpost");
+
+                entity.Property(e => e.PostId).HasColumnName("post_Id");
+
+                entity.Property(e => e.TagId).HasColumnName("tag_Id");
+
+                entity.HasOne(d => d.Post)
+                    .WithMany(p => p.Tagpost)
+                    .HasForeignKey(d => d.PostId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_tagpost_ToBlogPost");
+
+                entity.HasOne(d => d.Tag)
+                    .WithMany(p => p.Tagpost)
+                    .HasForeignKey(d => d.TagId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_tagpost_ToTag");
             });
 
             OnModelCreatingPartial(modelBuilder);

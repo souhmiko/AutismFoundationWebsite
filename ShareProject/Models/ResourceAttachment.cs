@@ -14,7 +14,9 @@ namespace ShareProject.Models
         public long FileSize { get; set; }
         public int? DateUpLoad { get; set; }
         public long ResourceId { get; set; }
+        public long AgeId { get; set; }
 
+        public virtual ResourceAgeRange Age { get; set; }
         public virtual Language Language { get; set; }
         public virtual Resource Resource { get; set; }
     }

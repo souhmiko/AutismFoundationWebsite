@@ -18,10 +18,12 @@ namespace ShareProject.Models
         public string MobileNumber { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public DateTime RegDate { get; set; }
+        public DateTime? RegDate { get; set; }
         public string Intro { get; set; }
         public string Profile { get; set; }
+        public string AspnetuserId { get; set; }
 
+        public virtual AspNetUsers Aspnetuser { get; set; }
         public virtual ICollection<BlogPost> BlogPost { get; set; }
     }
 }

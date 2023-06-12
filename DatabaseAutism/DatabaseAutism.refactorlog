@@ -14,4 +14,102 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="AgeRange" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="d4e0f72c-f832-45df-b66f-6184e724724c" ChangeDateTime="06/05/2023 15:31:26">
+    <Property Name="ElementName" Value="[dbo].[Employ.ASD].[ASDID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Employ.ASD]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ASD_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="afef8006-30d3-4a06-b1bb-f77056fcdc68" ChangeDateTime="06/05/2023 15:38:51">
+    <Property Name="ElementName" Value="[dbo].[Employ.ASD].[ASD_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Employ.ASD]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ASDD" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2182c783-049a-4d22-996e-d4e7bd6b872c" ChangeDateTime="06/05/2023 15:39:00">
+    <Property Name="ElementName" Value="[dbo].[Employ.ASD].[ASDD]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Employ.ASD]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ASDID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d5367678-51ca-4f78-b17b-853fe82a51fa" ChangeDateTime="06/09/2023 09:19:28">
+    <Property Name="ElementName" Value="[dbo].[Publication].[Publication_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Book_Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="88f8429b-4245-4d70-b16e-61df310e2981" ChangeDateTime="06/09/2023 15:40:19">
+    <Property Name="ElementName" Value="[dbo].[Publication].[books]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="No,books" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c66f9369-d1fb-43e8-8b4f-2f199f89f9e2" ChangeDateTime="06/09/2023 15:40:33">
+    <Property Name="ElementName" Value="[dbo].[Publication].[No,books]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="booksNum" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1eb0dda0-00cd-4b64-ab2a-5a0e64ee9175" ChangeDateTime="06/09/2023 15:40:38">
+    <Property Name="ElementName" Value="[dbo].[Publication].[ebooks]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ebooksNum" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="049a5fd6-a40e-43df-8cd4-ad145dc9f27f" ChangeDateTime="06/09/2023 15:44:19">
+    <Property Name="ElementName" Value="[dbo].[Publication].[ebooksNum]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ebookCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d1030c98-b6cd-4f9f-94c4-7a0155612ecd" ChangeDateTime="06/09/2023 15:44:24">
+    <Property Name="ElementName" Value="[dbo].[Publication].[booksNum]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="booksCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bc953fe6-ea95-4579-93f5-ad5b0a18c522" ChangeDateTime="06/09/2023 15:49:39">
+    <Property Name="ElementName" Value="[dbo].[Publication].[Publication_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="book_Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5537a91c-cfc9-4836-9e51-faeccb34f23d" ChangeDateTime="06/09/2023 16:31:50">
+    <Property Name="ElementName" Value="[dbo].[Publication].[ebooks]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ebookCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="740d7baa-c6b8-4665-bb52-d5c25aa70e77" ChangeDateTime="06/09/2023 16:31:56">
+    <Property Name="ElementName" Value="[dbo].[Publication].[books]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="bookCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fe49f5bf-ed02-478f-a274-1d1582a667f1" ChangeDateTime="06/09/2023 16:33:11">
+    <Property Name="ElementName" Value="[dbo].[Publication].[Publication_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Publication]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BookId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8750df13-ca64-4577-b4fb-3f5702daceb5" ChangeDateTime="06/11/2023 12:46:31">
+    <Property Name="ElementName" Value="[dbo].[ResourceTag].[TagName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ResourceTag]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Tag_Name" />
+  </Operation>
 </Operations>

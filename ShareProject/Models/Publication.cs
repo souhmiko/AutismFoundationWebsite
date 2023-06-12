@@ -8,10 +8,11 @@ namespace ShareProject.Models
     public partial class Publication
     {
         public long Id { get; set; }
-        public string Ebooks { get; set; }
-        public string Books { get; set; }
-        public long PublicationId { get; set; }
-
-        public virtual Resource PublicationNavigation { get; set; }
+        public string EbookCode { get; set; }
+        public string BookCode { get; set; }
+        public long BookId { get; set; }
+        public string BookTitle { get; set; }
+        public string AuthorName { get; set; }
+        public string Content { get; set; }
     }
 }

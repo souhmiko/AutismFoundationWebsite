@@ -9,15 +9,14 @@ namespace ShareProject.Models
     {
         public Resource()
         {
-            Publication = new HashSet<Publication>();
             ResourceAttachment = new HashSet<ResourceAttachment>();
         }
 
         public long Id { get; set; }
         public string Name { get; set; }
-        public string ResCategoryId { get; set; }
+        public long ResCategoryId { get; set; }
 
-        public virtual ICollection<Publication> Publication { get; set; }
+        public virtual ResourceCategory ResCategory { get; set; }
         public virtual ICollection<ResourceAttachment> ResourceAttachment { get; set; }
     }
 }

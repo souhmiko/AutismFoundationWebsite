@@ -5,9 +5,11 @@
     [MobileNumber] NVARCHAR (50) NOT NULL,
     [email]        NTEXT         NOT NULL,
     [password]     NCHAR (10)    NOT NULL,
-    [RegDate]      DATETIME      NOT NULL,
+    [RegDate]      DATETIME      NULL,
     [Intro]        TEXT          NOT NULL,
     [profile]      NTEXT         NOT NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
+    [aspnetuserID] NVARCHAR(450) NOT NULL ,
+    PRIMARY KEY CLUSTERED ([Id] ASC), 
+    CONSTRAINT [FK_User_ToTable] FOREIGN KEY ([aspnetuserID]) REFERENCES [AspNetUsers]([Id]),
 );
 

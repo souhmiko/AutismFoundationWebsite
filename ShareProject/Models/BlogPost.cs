@@ -12,12 +12,13 @@ namespace ShareProject.Models
             BlogPostMeta = new HashSet<BlogPostMeta>();
             InverseParent = new HashSet<BlogPost>();
             PostComment = new HashSet<PostComment>();
+            Tagpost = new HashSet<Tagpost>();
             Category = new HashSet<Category>();
         }
 
         public long Id { get; set; }
-        public long AuthorId { get; set; }
-        public long ParentId { get; set; }
+        public long? AuthorId { get; set; }
+        public long? ParentId { get; set; }
         public string Title { get; set; }
         public byte Publised { get; set; }
         public DateTime CreatedAtdate { get; set; }
@@ -30,6 +31,7 @@ namespace ShareProject.Models
         public virtual ICollection<BlogPostMeta> BlogPostMeta { get; set; }
         public virtual ICollection<BlogPost> InverseParent { get; set; }
         public virtual ICollection<PostComment> PostComment { get; set; }
+        public virtual ICollection<Tagpost> Tagpost { get; set; }
 
         public virtual ICollection<Category> Category { get; set; }
     }

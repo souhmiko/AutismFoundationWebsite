@@ -7,7 +7,16 @@ namespace ShareProject.Models
 {
     public partial class EmployAsd
     {
+        public EmployAsd()
+        {
+            Employment = new HashSet<Employment>();
+        }
+
         public long Id { get; set; }
         public string Name { get; set; }
+        public long Asdid { get; set; }
+
+        public virtual Employment Asd { get; set; }
+        public virtual ICollection<Employment> Employment { get; set; }
     }
 }

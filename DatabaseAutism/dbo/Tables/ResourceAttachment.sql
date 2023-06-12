@@ -6,8 +6,12 @@
     [FileSize]   BIGINT         NOT NULL,
     [DateUpLoad] INT            NULL,
     [ResourceId] BIGINT         NOT NULL,
+    [AgeId] BIGINT NOT NULL, 
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_ResourceAttachment_ToLanguage] FOREIGN KEY ([LanguageId]) REFERENCES [dbo].[Language] ([Id]),
-    CONSTRAINT [FK_ResourceAttachment_ToResource] FOREIGN KEY ([ResourceId]) REFERENCES [dbo].[Resource] ([Id])
+    CONSTRAINT [FK_ResourceAttachment_ToResourceAgeRange] FOREIGN KEY ([AgeId]) REFERENCES [dbo].[ResourceAgeRange] ([Id]), 
+    CONSTRAINT [FK_ResourceAttachment_ToResource] FOREIGN KEY ([ResourceId]) REFERENCES [dbo].[Resource]([Id])
 );
+
+
 

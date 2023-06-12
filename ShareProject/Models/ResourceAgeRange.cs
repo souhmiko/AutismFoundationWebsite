@@ -10,11 +10,13 @@ namespace ShareProject.Models
         public ResourceAgeRange()
         {
             AgeRange = new HashSet<AgeRange>();
+            ResourceAttachment = new HashSet<ResourceAttachment>();
         }
 
         public long Id { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<AgeRange> AgeRange { get; set; }
+        public virtual ICollection<ResourceAttachment> ResourceAttachment { get; set; }
     }
 }

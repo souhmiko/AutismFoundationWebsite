@@ -7,9 +7,16 @@ namespace ShareProject.Models
 {
     public partial class ResourceCategory
     {
+        public ResourceCategory()
+        {
+            Resource = new HashSet<Resource>();
+            ResourceTag = new HashSet<ResourceTag>();
+        }
+
         public long Id { get; set; }
         public string Name { get; set; }
 
-        public virtual ResourceTag ResourceTag { get; set; }
+        public virtual ICollection<Resource> Resource { get; set; }
+        public virtual ICollection<ResourceTag> ResourceTag { get; set; }
     }
 }

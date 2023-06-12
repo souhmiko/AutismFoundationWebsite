@@ -9,7 +9,8 @@ namespace ShareProject.Models
     {
         public long Id { get; set; }
         public string TagName { get; set; }
+        public long TagId { get; set; }
 
-        public virtual ResourceCategory IdNavigation { get; set; }
+        public virtual ResourceCategory Tag { get; set; }
     }
 }
