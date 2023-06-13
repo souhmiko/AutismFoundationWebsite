@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdminPanel.Data;
 
-public class AdminPanelContext : IdentityDbContext<AdminPanelUser>
+public class AdminPanelContext : IdentityDbContext<IdentityUser>
 {
     public AdminPanelContext(DbContextOptions<AdminPanelContext> options)
         : base(options)

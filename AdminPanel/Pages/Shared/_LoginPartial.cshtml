@@ -1,8 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using AdminPanel.Areas.Identity.Data
 
-@inject SignInManager<AdminPanelUser> SignInManager
-@inject UserManager<AdminPanelUser> UserManager
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))

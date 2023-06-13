@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectingString =
-    builder.Configuration.GetConnectionString("DatabaseAutism") ??
-    throw new InvalidCastException("Connection string'DatabaseAutism' not found");
+    builder.Configuration.GetConnectionString("DatabaseAutismContext") ??
+    throw new InvalidCastException("Connection string'DatabaseAutismContext' not found");
 
 builder.Services.AddDbContext<DatabaseAutismContext>(options =>
     options.UseSqlServer(connectingString));
@@ -33,8 +33,8 @@ builder.Services.ConfigureApplicationCookie(options =>
     //cookie settings
     options.Cookie.HttpOnly = true;
     options.ExpireTimeSpan = TimeSpan.FromDays(365);
-    options.LoginPath = "/Identity/Pages/Account/Login";
-    options.AccessDeniedPath = "/Identuty/Pages/Account/AccessDenied";
+    options.LoginPath = "/Identity/Account/Login";
+    options.AccessDeniedPath = "/Identuty/Account/AccessDenied";
     options.SlidingExpiration = true;
 });
 

@@ -47,6 +47,7 @@ namespace ShareProject.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.HasAnnotation("Scaffolding:ConnectionString", "Data Source=(local);Initial Catalog=DatabaseAutism;Integrated Security=true");
 
             modelBuilder.Entity<AgeRange>(entity =>

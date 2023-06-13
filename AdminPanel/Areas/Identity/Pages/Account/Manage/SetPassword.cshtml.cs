@@ -14,12 +14,12 @@ namespace AdminPanel.Areas.Identity.Pages.Account.Manage
 {
     public class SetPasswordModel : PageModel
     {
-        private readonly UserManager<AdminPanelUser> _userManager;
-        private readonly SignInManager<AdminPanelUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
         public SetPasswordModel(
-            UserManager<AdminPanelUser> userManager,
-            SignInManager<AdminPanelUser> signInManager)
+            UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
